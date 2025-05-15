@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <link rel="stylesheet" href="/src/css/canvas.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about.html">O projekcie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+      
+          <main role="main">
+      
+            <div class="container" id="opis">
+              <p class="h4">Pryzmat</p>
+                <p>Gdy wiązka światła pada na pryzmat o współczynniku załamania różnym od współczynnika ośrodka pod dodatnim kątem, dochodzi do załamania światła. Kąt załamania \(\beta\) liczony jest zgodnie z tzw. prawem Snella:\[\frac{\sin\alpha}{\sin\beta}=n\] gdzie \(\alpha\) to kąt padania światła na powierzchnię pryzmatu, a \(n\) to współczynnik załamania pryzmatu. Przy wychodzeniu wiązki z pryzmatu ponownie dochodzi do załamania.</p>
+            </div>
+
+            <div class="container">
+                <canvas id="canvas" width="1000rem" height="600rem">No canvas support</canvas>
+            </div>
+
+            <!-- Modal o odbiciu -->
+            <div class="modal fade" id="odbicie" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                Odbicie
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Kąt padania jest większy od kąta granicznego, tzn. kąt załamania po wyjściu z pryzmatu okazuje się być większy od 90 stopni, w związku z tym dochodzi do całkowitego wewnętrznego odbicia.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-left: auto; margin-right: auto;">Nic nie rozumiem, ale zabierz mnie stąd</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2>Wybierz parametry</h2>
+                <div class="form-group">
+                <label for="n">Współczynnik załamania światła pryzmatu: \(n\) :</label>
+                <input class="form-control" id="n" placeholder="Wprowadź współczynnik załamania światła" name="n" value="1.5">
+                </div>
+                <div class="form-group">
+                <label for="phi">Kąt rozwarcia \( \varphi \) :</label>
+                <input class="form-control" id="phi" placeholder="Wprowadź kąt rozwarcia" name="phi" value="45">
+                </div>
+                <div class="form-group">
+                <label for="alpha">Kąt padania \( \alpha \) :</label>
+                <input class="form-control" id="alpha" placeholder="Wprowadź kąt padania" name="alpha" value="30">
+                </div>
+                <button id="submit" class="btn btn-primary">Pokaż animacje</button>
+            </div>
+          </main>
+          <div class="container" id="warto-wiedziec">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading"><img src="/img/lamp.svg" style="width: 2rem; height: 2rem;"> Warto wiedzieć!</h4>
+                <p>Fale o różnych długościach załamują się pod różnymi kątami. Stąd, gdy poświecimy na niego wiązką światła białego, które składa się z fali o wszystkich możliwych długościach światła widzialnego, to po przejściu przez pryzmat powstanie tęcza. Pod największym kątem załamie się wiązka światła fioletowego, a pod najmniejszym- czerwonego.</p>
+                <img src="/img/pryzmacik.png" style="display: block; margin-left: auto; margin-right: auto;" />
+            </div>
+        </div>
+      
+          <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
+
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/src/js/pryzmat.js"></script>
+    </body>
+</html>
+

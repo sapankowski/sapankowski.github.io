@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <link rel="stylesheet" href="/src/css/canvas.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about.html">O projekcie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+      
+          <main role="main">
+      
+            <div class="container" id="opis">
+              <p class="h4">Zderzenia sprężyste</p>
+              
+              <p>Zderzenie sprężyste – zderzenie, w którym w stanie końcowym mamy te same cząstki (obiekty), co w stanie początkowym, i zachowana jest energia kinetyczna. W fizyce zderzenia analizuje się opisując stan ciał przed i po zderzeniu nie wnikając w szczegóły oddziaływania w trakcie zderzenia.</p>
+            </div>
+
+            <div class="container">
+                <canvas id="canvas" width="1000rem" height="600rem">No canvas support</canvas>
+            </div>
+
+            <div class="container">
+                <h2>Wybierz parametry</h2>
+                <div class="form-group">
+                <label for="v1x">\(v_{1x}\) :</label>
+                <input class="form-control" id="v1x" placeholder="Wprowadź składową x pierwszej prędkości" name="v1x" value="5">
+                </div>
+                <div class="form-group">
+                <label for="v1y">\(v_{1y}\) :</label>
+                <input class="form-control" id="v1y" placeholder="Wprowadź składową y pierwszej prędkości" name="v1y" value="0.1">
+                </div>
+                <div class="form-group">
+                <label for="v2x">\(v_{2x}\) :</label>
+                <input class="form-control" id="v2x" placeholder="Wprowadź składową x drugiej prędkości" name="v2x" value="-1">
+                </div>
+                <div class="form-group">
+                <label for="v2y">\(v_{2y}\) :</label>
+                <input class="form-control" id="v2y" placeholder="Wprowadź składową y drugiej prędkości" name="v2y" value="0">
+                </div>
+                <div class="form-group">
+                <label for="m1">\(m_1\) :</label>
+                <input class="form-control" id="m1" placeholder="Wprowadź pierwszą masę" name="m1" value="6">
+                </div>
+                <div class="form-group">
+                <label for="m2">\(m_2\) :</label>
+                <input class="form-control" id="m2" placeholder="Wprowadź drugą masę" name="m2" value="8">
+                </div>
+                <button id="submit" class="btn btn-primary">Pokaż animacje</button>
+              </div>
+
+            <div class="container">
+                <p>
+                  
+                </p>
+            </div>
+          </main>
+      
+          <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
+
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/src/js/zderzenia.js"></script>
+    </body>
+</html>
+

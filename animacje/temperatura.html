@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <link rel="stylesheet" href="/src/css/canvas.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about.html">O projekcie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+          <main role="main">
+      
+            <div class="container" id="opis">
+              <p class="h4">Przepływ ciepła</p>
+                <p>Przewodzenie ciepła to proces wymiany ciepła między ciałami o różnej temperaturze pozostającymi ze sobą w bezpośrednim kontakcie. Polega on na przekazywaniu energii kinetycznej bezładnego ruchu cząsteczek w wyniku ich zderzeń. Proces prowadzi do wyrównania temperatury między ciałami. Ciepło płynie tylko wtedy, gdy występuje różnica temperatur, w kierunku od temperatury wyższej do temperatury niższej. Moc \(P\), z jaką ciepło przepływa przez prostopadłościenne pudełko o wymiarach \(\Delta x\times a\times b\), gdzie \(\Delta x\ll a, b\), wyraża się wzorem \[P=\lambda A\frac{\Delta T}{\Delta x}\] gdzie \(\Delta T\) jest różnicą temperatur między warstwami, \(A\)-polem powierzchni kolejnych warstw, zaś \(\lambda\) to współczynnik przewodzenia dla danego materiału. Można zatem zauważyć, że moc ciepła przepływającego przez daną warstwę jest wprost proporcjonalna do różnicy temperatur między jej stronami. Oczywiście, dla danej mocy dostarczanej do pewnej warstwy, tempo jej nagrzewania się zależy od ciepła właściwego materiału, zgodnie ze wzorem: \[\frac{dT}{dt}=\frac{P}{dmc_w}\] gdzie \(dm\) to masa warstwy, a \(c_w\) to ciepło właściwe materiału, z którego jest wykonana. Nasza symulacja pokazuje rozkład temperatur dla dwóch stykających się ciał w każdej chwili czasu. Na górze obszaru symulacji wyświetlają się wartości poszczególnych warstw w Kelvinach.</p>
+            </div>
+
+            <div class="container">
+                <canvas id="canvas" width="1000rem" height="600rem">No canvas support</canvas>
+            </div>
+
+            <!-- Modal o braku przeplywu -->
+            <div class="modal fade" id="brakprzeplywu" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">
+                              Brak przepływu!
+                          </h5>
+                          <button type="button" class="close" data-dismiss="modal">
+                              <span>&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Temperatur obu ciał jest równa - nie zachodzi przepływ ciepła.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-left: auto; margin-right: auto;">Nic nie rozumiem, ale zabierz mnie stąd</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            <div class="container">
+                <h2>Wybierz parametry</h2>
+                <div class="form-group">
+                <label for="t1">Temperatura \(T_1\):</label>
+                <input class="form-control" id="t1" placeholder="Wprowadź temperature T1" name="t1" value="1000">
+                </div>
+                <div class="form-group">
+                <label for="t2">Temperatura \( T_2 \):</label>
+                <input class="form-control" id="t2" placeholder="Wprowadź temperature T2" name="t2" value="10">
+                </div>
+                <div class="form-group">
+                <label for="c1">Ciepło właściwe \( 200 \leq c_1\):</label>
+                <input class="form-control" id="c1" placeholder="Wprowadź ciepło właściwe C1" name="c1" value="200">
+                </div>
+                <div class="form-group">
+                <label for="c2">Ciepło właściwe \(200 \leq c_2\):</label>
+                <input class="form-control" id="c2" placeholder="Wprowadź ciepło właściwe C2" name="c2" value="250">
+                </div>
+                <button id="submit" class="btn btn-primary">Pokaż animacje</button>
+              </div>
+      
+          <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
+
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/src/js/temperatura.js"></script>
+    </body>
+</html>
+

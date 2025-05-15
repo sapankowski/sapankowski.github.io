@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <link rel="stylesheet" href="/src/css/canvas.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about.html">O projekcie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+      
+          <main role="main">
+      
+            <div class="container" id="opis">
+              <p class="h4">Rzuty</p>
+                <p>Rzut ukośny – ruch w jednorodnym polu grawitacyjnym z prędkością początkową o kierunku ukośnym do kierunku pola. Ruch ten odpowiada ruchowi ciała rzuconego pod kątem do poziomu. Za rzut ukośny uznaje się też ruch ciała w kierunku ukośnym do jednorodnego pola elektrycznego. Nasza symulacja daje unikalną możliwość uwzględnienia siły oporu w rozpatrywanym zjawisku. Siła oporu aerodynamicznego kuli, zgodnie z formułą Stokesa może zostać wyrażona wzorem \(F_{op}=6\pi \mu R v\), gdzie \(R\) to promień kulki, różny dla ciał o różnych kształtach, \(\mu\), to lepkość ośrodka, a \(v\) to prędkość kulki. Iloczyn \(6\pi \mu R\) jest stały dla niezmiennych parametrów otoczenia i kształtu ciała, toteż oznaczyliśmy go wnaszej symulacji jako \(\alpha\) i to jego trzeba podać przy wyborze parametrów. Trzeba jednak mieć na uwadze, że formuła Stokesa ma bardzo wąski zakres zastosowań (działa wyłącznie dla małych prędkości i przepływ po stronie zawietrznej ma charakter regularny). </p>
+            </div>
+
+            <div class="container">
+                <canvas id="canvas" width="1000rem" height="600rem">No canvas support</canvas>
+            </div>
+
+            <div class="container">
+                <h2>Wybierz parametry</h2>
+                <div class="form-group">
+                <label for="v1x">\(v_{x}\) :</label>
+                <input class="form-control" id="vx" placeholder="Wprowadź składową x prędkości" name="vx" value="5">
+                </div>
+                <div class="form-group">
+                <label for="vy">\(v_{y}\) :</label>
+                <input class="form-control" id="vy" placeholder="Wprowadź składową y prędkości" name="vy" value="10">
+                </div>
+                <div class="form-group">
+                <label for="h">\(h\) :</label>
+                <input class="form-control" id="h" placeholder="Wprowadź wysokość, z jakiej chcesz wykonać rzut (0-100)" name="h" value="20">
+                </div>
+                <div class="form-group">
+                <label for="g">\(g\) :</label>
+                <input class="form-control" id="g" placeholder="Wprowadź wartość przyspieszenia grawitacyjnego" name="g" value="10">
+                </div>
+                <div class="form-group">
+                <label for="alpha">\(\alpha\) :</label>
+                <input class="form-control" id="alpha" placeholder="Wprowadź współczynnik oporu" name="alpha" value="1">
+                </div>
+                <div class="form-group">
+                <label for="g">\(m\) :</label>
+                <input class="form-control" id="m" placeholder="Wprowadź wartość przyspieszenia grawitacyjnego" name="m" value="5">
+                </div>
+                <button id="submit" class="btn btn-primary">Pokaż animacje</button>
+              </div>
+
+            <div class="container">
+                <p>
+                  
+                </p>
+            </div>
+          </main>
+      
+          <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
+
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/src/js/rzuty.js"></script>
+    </body>
+</html>
+

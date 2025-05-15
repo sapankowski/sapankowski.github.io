@@ -1,41 +1,251 @@
-<!-- _layouts/default.html -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - BMW Models</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-  <header>
-    <h1>BMW 2025 – Complete Model Catalogue</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/model_groups/">Model Groups</a></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">O projekcie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+      
+          <main role="main">
+      
+            <section class="jumbotron text-center">
+              <div class="container">
+                <h1 class="jumbotron-heading">Witaj uczniu!</h1>
+                <p class="lead text-muted">Oto kolekcja symulacji i animacji z Fizyki ze zmiennymi parametrami. Dowiedz się drogą wirtualnych eksperymentów, jak działają zjawiska fizyczne.</p>
+                <p>
+                  <a href="wesprzyj.html" class="btn btn-primary my-2">Wesprzyj</a>
+                </p>
+              </div>
+            </section>
+      
+            <div class="album py-5 bg-light">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/bloczki.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Bloczki</p>
+                        <p class="card-text">Wielokrążek – układ cięgien i krążków umożliwiający przełożenie siły, dzięki któremu można np. podnieść duży ciężar, działając mniejszą siłą.</p>
+                        <a href="/animacje/bloczki.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/dzwignia.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Dźwignia</p>
+                        <p class="card-text">Dźwignia obustronna jest to jedna z maszyn prostych, których zadaniem jest uzyskanie działania większej siły przez zastosowanie siły mniejszej.</p>
+                        <a href="/animacje/dzwignia.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/doppler.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Efekt Dopplera</p>
+                        <p class="card-text">Efekt Dopplera – zjawisko fizyczne występujące dla fal, polegające na powstawaniu różnicy częstotliwości fali wysyłanej przez jej źródło oraz częstotliwości fali rejestrowanej przez obserwatora, wywołane względnym ruchem źródła i obserwatora.</p>
+                        <a href="/animacje/doppler.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/interferencja.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Interferencja fal</p>
+                        <p class="card-text">Interferencja to zjawisko powstawania nowego, przestrzennego rozkładu amplitudy fali (wzmocnienia i wygaszenia) w wyniku nakładania się (superpozycji) dwóch lub więcej fal.</p>
+                        <a href="/animacje/interferencja.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/optyka.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Konstrukcja obrazu</p>
+                        <p class="card-text">Obraz – w optyce geometrycznej, reprezentacja rzeczywistego przedmiotu (źródła promieni świetlnych).</p>
+                        <a href="/animacje/optyka.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/pole.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Pole elektryczne</p>
+                        <p class="card-text">Pole elektryczne – pole wektorowe określające w każdym punkcie siłę działającą na jednostkowy, spoczywający ładunek elektryczny. Pole elektryczne wytwarzane jest przez ładunki elektryczne oraz zmieniające się pole magnetyczne.</p>
 
-  <main>
-    <hr />
+                        <a href="/animacje/pole.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/pryzmat.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Pryzmat</p>
+                        <p class="card-text">Pryzmat – bryła z materiału przezroczystego o co najmniej dwóch ścianach płaskich nachylonych do siebie pod kątem \(\varphi\) (tzw. kątem łamiącym pryzmatu).</p>
+                        <a href="/animacje/pryzmat.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/temperatura.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Przepływ ciepła</p>
+                        <p class="card-text">Przewodzenie ciepła to proces wymiany ciepła między ciałami o różnej temperaturze pozostającymi ze sobą w bezpośrednim kontakcie. Polega on na przekazywaniu energii kinetycznej bezładnego ruchu cząsteczek w wyniku ich zderzeń. Proces prowadzi do wyrównania temperatury między ciałami.</p>
+                        <a href="/animacje/temperatura.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/rownia.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text h5">Równia pochyła</p>
+                        <p class="card-text">Równia to płaska powierzchnia nachylona do poziomu pod pewnym kątem. Wyznaczanie parametrów ruchu ciała po tej powierzchni (przede wszystkim wyznaczenie przyspieszenia) nazywane jest zagadnieniem równi.</p>
+                        <a href="/animacje/rownia.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/spring.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Ruch harmoniczny sprężyny</p>
+                        <p class="card-text">Ruch harmoniczny – ruch drgający, w którym na ciało działa siła o wartości proporcjonalnej do wychylenia ciała z jego położenia równowagi, skierowana zawsze w stronę punktu równowagi. Wykres wychylenia ciała od położenia równowagi w zależności od czasu jest tzw. krzywą harmoniczną (np. sinusoidą)</p>
+                        <a href="/animacje/spring.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+      
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/ruchcial.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Ruch planet</p>
+                        <p class="card-text">Zbadaj zależności między masami ciał przyciągających się grawitacyjnie, ich początkowymi prędkościami oraz odległościami między nimi, a trajektorią ich ruchu.</p>
+                        <a href="/animacje/ruchcial.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/rzuty.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Rzuty</p>
+                        <p class="card-text">Rzut ukośny – ruch w jednorodnym polu grawitacyjnym z prędkością początkową o kierunku ukośnym do kierunku pola. Ruch ten odpowiada ruchowi ciała rzuconego pod kątem do poziomu. Za rzut ukośny uznaje się też ruch ciała w kierunku ukośnym do jednorodnego pola elektrycznego.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a href="/animacje/rzuty.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/skladaniep.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Składanie drgań prostopadłych</p>
+                        <p class="card-text">Po złożeniu drgań w dwóch prostopadłych kierunkach i zmapowaniu tych drgań na płaszczyznę, pozornie chaotyczny ruch potrafi wygenerować nieoczekiwanie symetryczne i regularne kształty.</p>
+                        <a href="/animacje/skladaniep.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/wahadlo.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class=" card-text h5">Wahadło</p>
+                        <p class="card-text">Wahadło to ciało zawieszone w jednorodnym polu grawitacyjnym w taki sposób, że może wykonywać drgania wokół poziomej osi nie przechodzącej przez środek ciężkości zawieszonego ciała. Nasza symulacja daje unikalną możliwość uwzględnienia siły oporu w rozpatrywanym zjawisku.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a href="/animacje/wahadlo.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="/img/zderzenia.png" alt="Bosski boss">
+                      <div class="card-body">
+                        <p class="card-text h5">Zderzenia</p>
+                        <p class="card-text">Zderzenie sprężyste – zderzenie, w którym w stanie końcowym mamy te same cząstki (obiekty), co w stanie początkowym, i zachowana jest energia kinetyczna. W fizyce zderzenia analizuje się opisując stan ciał przed i po zderzeniu nie wnikając w szczegóły oddziaływania w trakcie zderzenia.</p>
+                        <a href="/animacje/zderzenia.html" class="btn btn-sm btn-outline-secondary">Wyświetl</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-body">
+                        <p class=" card-text h5">Siatka dyfrakcyjna</p>
+                        <a class="btn btn-sm btn-secondary" disabled>Już wkrótce!</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-body">
+                        <p class=" card-text h5">Model silnika spalinowego</p>
+                        <a class="btn btn-sm btn-secondary" disabled>Już wkrótce!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          </main>
+      
+          <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
 
-<p>Welcome to the most up-to-date BMW 2025 catalogue, created based on official manufacturer data. Here, you will find a comprehensive overview of the latest models – from the dynamic 3 Series sedans and luxurious X7 SUVs to the innovative, all-electric BMW iX. Each car is thoroughly described, including key technical specifications, engine options, prices, and links to the configurator.</p>
-
-<p>BMW (Bayerische Motoren Werke) is a brand with over a century of history, setting automotive standards from the very beginning. Founded in 1916 in Munich, the company initially specialized in manufacturing aircraft engines before revolutionizing the car market with unparalleled engineering, sporty character, and elegant design. Today, BMW remains synonymous with luxury, innovation, and exceptional driving experiences, offering both classic combustion-engine models and modern electric vehicles that define the future of mobility.</p>
-
-<p>Explore the catalogue and find your perfect BMW for 2025!</p>
-
-<hr />
-<ul>
-  <li><a href="/model_groups/">List of BMW series</a></li>
-</ul>
-  <!-- The page content will go here -->
-  </main>
-
-  <footer>
-    <p>&copy; 2025 BMW Models. All rights reserved.</p>
-  </footer>
-</body>
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </body>
 </html>
+

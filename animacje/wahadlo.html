@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <link rel="stylesheet" href="/src/css/canvas.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">O projekcie</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+      
+          <main role="main">
+      
+            <div class="container" id="opis">
+              <p class="h4">Wahadło</p>
+              <p>Wahadło to ciało zawieszone w jednorodnym polu grawitacyjnym w taki sposób, że może wykonywać drgania wokół poziomej osi nie przechodzącej przez środek ciężkości zawieszonego ciała. Nasza symulacja daje unikalną możliwość uwzględnienia siły oporu w rozpatrywanym zjawisku.</p>
+            </div>
+
+            <div class="container">
+                <canvas id="canvas" width="1000rem" height="600rem">No canvas support</canvas>
+            </div>
+
+            <div class="container">
+                <p class="h3">Wybierz parametry</p>
+                <div class="form-group">
+                    <label for="l">Długość \( l \) wahadła (liczba rzeczywista od 1 do 5)</label>
+                    <input class="form-control" type="text" name="l" id="l" value="3">
+                </div>
+                <div class="form-group">
+                    <label for="g">Przyszpieszenie grawitacyjne \( g \)</label>
+                    <input class="form-control" type="text" name="g" id="g" value="9.81">
+                </div>
+                <div class="form-group">
+                    <label for="m">Masa ciała \( m \)</label>
+                    <input class="form-control" type="text" name="m" id="m" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="A">Amplituda ruchu (podaj wartość kąta od 0 do 90 stopni): </label>
+                    <input type="text" class="form-control" name="A" id="A" value="60">
+                </div>
+                <div class="form-group">
+                    <label for="alpha">Współczynnik oporu aerodynamicznego \( \alpha \)</label> <a href="#warto-wiedziec" type="button" class="btn btn-success btn-sm">Warto wiedzieć! <img src="/img/lamp.svg" style="width: 1rem; height: 1rem;"></a>
+                    <input type="text" class="form-control" name="alpha" id="alpha" value="8">
+                </div>
+                <button id="submit" class="btn btn-primary">Pokaż animacje</button>
+            </div>
+        
+            <div class="container" id="warto-wiedziec">
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><img src="/img/lamp.svg" style="width: 2rem; height: 2rem;"> Warto wiedzieć!</h4>
+                    <p>Opór aerodynamiczny to równoległa i przeciwnie skierowana do kierunku ruchu ciała względem ośrodka siła. W naszych symulacjach dla uproszczenia przyjmujemy \[ \vec{R} = - \frac{\alpha}{100} \cdot \vec{v} \] gdzie \( \vec{R} \) to wektor siły oporu, \( \alpha \) to współczynnik procentowy oporu oraz \( \vec{v} \) wektor chwilowej prędkości liniowej ciała.</p>
+                </div>
+            </div>
+
+            <footer class="text-muted">
+              <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
+
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/src/js/wahadlo.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about.html">O projekcie</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+      
+          <main role="main">
+            <div class="container" id="oprojekcie">
+              <p class="h3">Wesprzyj nas!</p>
+              
+              <p class="h5">Bitcoin</p>
+              <p>Adres portfela: 3GuCQynfV7ZruE1SfL6PTqbjZvSDH4LtF9</p>
+              <p><div id="bitcoin"></div></p>
+
+              <p class="h5">Dogecoin</p>
+              <p>Adres portfela: DDELK7AeCNgfioxLznFJg5eqXNoxGYQnMJ</p>
+              <p><div id="dogecoin"></div></p>
+
+              <p class="h5">Ethereum</p>
+              <p>Adres portfela: 0x76756c8077b7da765e6a2e30d8d0503abe97a47f</p>
+              <p><div id="ethereum"></div></p>
+            </div>
+          </main>
+      
+          <footer class="text-muted">
+            <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
+
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/src/js/qrcode.min.js"></script>
+        <script>
+          var QR_CODE = new QRCode("bitcoin", {
+            width: 220,
+            height: 220,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H,
+          });
+          QR_CODE.makeCode("3GuCQynfV7ZruE1SfL6PTqbjZvSDH4LtF9");
+          QR_CODE = new QRCode("dogecoin", {
+            width: 220,
+            height: 220,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H,
+          });
+          QR_CODE.makeCode("DDELK7AeCNgfioxLznFJg5eqXNoxGYQnMJ");
+          QR_CODE = new QRCode("ethereum", {
+            width: 220,
+            height: 220,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H,
+          });
+          QR_CODE.makeCode("0x76756c8077b7da765e6a2e30d8d0503abe97a47f");
+        </script>
+      </body>
+</html>
+

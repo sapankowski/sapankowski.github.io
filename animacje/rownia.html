@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <link rel="stylesheet" href="/src/css/canvas.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>Fizyka na Maksa</title>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Fizyka na Maksa!</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">O projekcie</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/wesprzyj.html">Wesprzyj projekt</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+      
+          <main role="main">
+      
+            <div class="container" id="opis">
+              <p class="h4">Równia pochyła</p>
+              <p>Równia to płaska powierzchnia nachylona do poziomu pod pewnym kątem. Wyznaczanie parametrów ruchu ciała po tej powierzchni (przede wszystkim wyznaczenie przyspieszenia) nazywane jest zagadnieniem równi.</p>
+            </div>
+
+            <!-- Modal o tarciu i nie zjezdzaniu -->
+            <div class="modal fade" id="niezjezdzaj" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                Nigdzie nie jedziesz!
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Dla podanych danych klocek nie ruszy z miejsca. Wynika to z faktu, że składowa równoległa siły grawitacji jest mniejsza od maksymalnej siły tarcia statycznego.</p>
+                            <p>\[ Q_{\|} \le T_{smax} \] gdzie \( Q_{\|} \) to równoległa składowa siły grawitacji, a \( T_{smax} \) to maksymalna siła tarcia statycznego</p>
+                            <p>\[ Q_{\|} = mg \sin \alpha \] \[ T_{smax} = \mu_s \cdot Q_{\bot} = \mu_s m g \cos \alpha \]</p>
+                            <p>Stąd jeżeli zachodzi warunek \[ \tan \alpha \le \mu_s \] ciało nie ruszy z miejsca.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-left: auto; margin-right: auto;">Nic nie rozumiem, ale zabierz mnie stąd</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <canvas id="canvas" width="1000rem" height="600rem">No canvas support</canvas>
+            </div>
+
+            <div class="container" id="przyklejony">
+                <p class="h3">Wybierz parametry</p>
+                <div class="form-group">
+                    <label for="alpha">Kąt nachylenia \( \alpha \) równi (podaj w stopniach od 0 do 90)</label>
+                    <input class="form-control" type="text" name="alpha" id="alpha" value="30">
+                </div>
+                <hr>
+                <div class="alert alert-danger">
+                    Musi zachodzić \( \mu_s \ge \mu_k \).
+                </div>
+                <div class="form-group">
+                    <label for="mus">Współczynnik tarcia statycznego \( \mu_s \)</label>
+                    <input class="form-control" type="text" name="mus" id="mus" value="0.5">
+                </div>
+                <div class="form-group">
+                    <label for="muk">Współczynnik tarcia kinetycznego \( \mu_k \)</label>
+                    <input class="form-control" type="text" name="muk" id="muk" value="0.4">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="v0">Prędkość początkowa \( v_0 \)</label>
+                    <input class="form-control" type="text" name="v0" id="v0" value="0">
+                </div>
+                <button id="submit" class="btn btn-primary">Pokaż animacje</button>
+            </div>
+
+            <footer class="text-muted">
+                <div class="container">
+              <p class="float-right">
+                <a href="#">Wróć na górę!</a>
+              </p>
+              <p>Fizyka na Maksa!</p>
+              <p>Autorzy: Kacper Omieliańczyk i Stanisław Antoni Pańkowski</p>
+              <p class="font-italic">,,Lenistwo motorem rozwoju''</p>
+            </div>
+          </footer>
+
+        <script src="/src/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="/src/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/src/js/rownia.js"></script>
+    </body>
+</html>
+
